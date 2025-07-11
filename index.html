@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>学校注文フォーム</title>
+
+  <!-- LINE LIFF SDKの読み込み -->
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+  <!-- 外部ファイルの読み込み -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <h2>職員室用 注文フォーム</h2>
+
+  <form id="orderForm">
+    <label for="item">商品：
+      <select name="item" id="item" required>
+        <option value="">-- 商品を選んでください --</option>
+        <option value="コーヒー">コーヒー</option>
+        <option value="お茶">お茶</option>
+        <option value="クッキー">クッキー</option>
+        <option value="キャンディ">キャンディ</option>
+      </select>
+    </label>
+
+    <label for="quantity">数量：
+      <input
+        type="number"
+        name="quantity"
+        id="quantity"
+        value="1"
+        min="1"
+        required
+      />
+    </label>
+
+    <label for="room">職員室：
+      <select name="room" id="room" required>
+        <option value="">-- 職員室を選んでください --</option>
+        <option value="職員室">職員室</option>
+        <option value="生徒指導室">生徒指導室</option>
+        <option value="商業センター">商業センター</option>
+        <option value="進路指導室">進路指導室</option>
+      </select>
+    </label>
+
+    <button type="submit">注文する</button>
+  </form>
+</body>
+</html>
